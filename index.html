@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Todo app</title>
 </head>
 
 <body>
     <main id="app">
         <div>
-            <h3>{{title}}</h3>
+            <h1>{{title}}</h1>
             <form @submit.prevent="addTodo">
                 <label for="newTodo">New Todo</label>
-                <input v-model="newTodo" type="text" name="NewTodo" id="newTodo">
-                <button type="submit">Add</button>
+                <input v-model="newTodo" type="text" name="NewTodo" id="newTodo" placeholder="Enter your todo here...">
+                <button type="submit" class="main-btn add-todo">Add Todo</button>
             </form>
-            <button type="button" name="button" @click="allDone">All done</button>
-            <ul>
-                <li v-for="todo in todos">
+            <button type="button" name="button" @click="allDone" class="main-btn remove-all">Mark All Done</button>
+            <ul class="todo-wrap">
+                <li v-for="todo in todos" class="todo">
                     <input type="checkbox" v-model="todo.done">
                     <span :class="{done: todo.done}">{{todo.title}}</span>
-                    <button @click="removeTodo(todo)" type="button" name="button">Remove</button>
+                    <button @click="removeTodo(todo)" type="button" name="button" class="remove-btn">X</button>
                 </li>
             </ul>
         </div>
