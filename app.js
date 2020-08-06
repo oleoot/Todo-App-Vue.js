@@ -7,7 +7,10 @@ const app = new Vue({
     },
     methods: {
         addTodo() {
-            this.todos.push(this.newTodo)
+            this.todos.push({
+                title: this.newTodo,
+                done: false
+            })
             console.log(this.todoArr)
         }
     }
