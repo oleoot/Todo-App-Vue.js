@@ -11,7 +11,7 @@ const app = new Vue({
                 title: this.newTodo,
                 done: false
             })
-            console.log(this.todoArr)
+            this.newTodo = ''
         }
     }
 })

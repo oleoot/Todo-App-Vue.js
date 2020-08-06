@@ -17,6 +17,9 @@
                 <input v-model="newTodo" type="text" name="NewTodo" id="newTodo">
                 <button type="submit">Add</button>
             </form>
+            <ul>
+                <li v-for="todo in todos">{{todo.title}}</li>
+            </ul>
         </div>
     </main>
 
