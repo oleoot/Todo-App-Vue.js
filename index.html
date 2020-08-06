@@ -10,12 +10,14 @@
 
 <body>
     <main id="app">
-        <h3>{{title}}</h3>
-        <form @submit.prevent="addTodo">
-            <label for="newTodo">New Todo</label>
-            <input v-model="newTodo" type="text" name="NewTodo" id="newTodo">
-            <button type="submit">Add</button>
-        </form>
+        <div>
+            <h3>{{title}}</h3>
+            <form @submit.prevent="addTodo">
+                <label for="newTodo">New Todo</label>
+                <input v-model="newTodo" type="text" name="NewTodo" id="newTodo">
+                <button type="submit">Add</button>
+            </form>
+        </div>
     </main>
 
 
