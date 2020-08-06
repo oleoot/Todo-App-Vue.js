@@ -17,6 +17,7 @@
                 <input v-model="newTodo" type="text" name="NewTodo" id="newTodo">
                 <button type="submit">Add</button>
             </form>
+            <button type="button" name="button" @click="allDone">All done</button>
             <ul>
                 <li v-for="todo in todos">
                     <input type="checkbox" v-model="todo.done">
