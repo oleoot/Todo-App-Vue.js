@@ -18,7 +18,10 @@
                 <button type="submit">Add</button>
             </form>
             <ul>
-                <li v-for="todo in todos">{{todo.title}}</li>
+                <li v-for="todo in todos">
+                    <input type="checkbox" v-model="todo.done">
+                    <span :class="{done: todo.done}">{{todo.title}}</span>
+                </li>
             </ul>
         </div>
     </main>
